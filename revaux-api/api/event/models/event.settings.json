@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "duration": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "categories": {
+      "via": "events",
+      "collection": "category"
+    },
+    "imageurl": {
+      "type": "string"
+    }
+  }
+}
