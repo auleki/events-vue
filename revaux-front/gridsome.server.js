@@ -20,14 +20,17 @@ module.exports = function (api) {
   api.loadSource(async actions => {
     const { data } = await axios.default('http://localhost:1337/events')
     const collection = actions.addCollection({
-      typeName: 'Event'
+      typeName: 'Event',
+      path: '/events/:id'
     })
 
     for (const event of data) {
       collection.addNode({
         id: event.id,
+        path: '/events/' + event.id,
         title: event.title,
         description: event.description,
+        price: event.price,
         date: event.date,
         duration: event.duration,
         image: event.imageurl,
