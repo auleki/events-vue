@@ -3,7 +3,7 @@ import moment from "moment";
 
 export default {
   metaInfo: {
-    title: "Hello, world!",
+    title: "!",
   },
   data() {
     return {

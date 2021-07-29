@@ -16,10 +16,12 @@ export default {
       </v-toolbar-title>
       <v-text-field
         placeholder="Search"
+        @click:clear="searchText = ''"
         class="ml-8"
         style="max-width: 350px"
         prepend-inner-icon="mdi-magnify"
         outlined
+        clearable
         v-model="searchText"
         rounded
         dense
